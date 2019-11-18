@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ToDoList</string>
+    <string name="title_home">TemporalTask</string>
+    <string name="title_dashboard">CyclicTask</string>
+    <string name="title_notifications">LongTermTask</string>
+</resources>

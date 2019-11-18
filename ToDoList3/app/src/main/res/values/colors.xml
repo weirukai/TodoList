@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6495ED</color>
+    <color name="colorPrimaryDark">#6495ED</color>
+    <color name="colorAccent">#6495ed</color>
+    <color name="backgroundHui">#d3d3d3</color>
+    <color name="textView">#dcdcdc</color>
+    <color name="button">#abcdef</color>
+    <color name="subtask">#DcDcd6</color>
+</resources>
