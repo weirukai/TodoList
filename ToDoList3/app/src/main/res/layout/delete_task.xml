@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="244dp"
+    android:background="@color/backgroundHui">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/sub_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        app:elevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/subBar"
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:ems="10"
+            android:gravity="center|center_horizontal"
+            android:text="DeleteTask"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <EditText
+        android:id="@+id/deleteName"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/textView"
+        android:hint="输入删除任务的名称："
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sub_bar"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/delete_search"
+        android:layout_width="50dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="13dp"
+        android:background="@color/button"
+        android:text="检索"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sub_bar"/>
+
+    <TextView
+        android:id="@+id/deleteDeadline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/textView"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteName" />
+
+    <TextView
+        android:id="@+id/deleteDescription"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/textView"
+        android:text=""
+        android:gravity="center"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteDeadline" />
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="190dp"
+        android:background="#abcdef"
+        android:text="删除"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

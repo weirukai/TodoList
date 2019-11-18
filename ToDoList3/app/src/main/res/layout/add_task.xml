@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundHui">
+
+    <EditText
+        android:id="@+id/TaskName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/textView"
+        android:hint="输入任务名称"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/TaskName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+       />
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/addBar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="150dp"
+                android:text="addTask"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="center"
+                android:textSize="28sp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RadioGroup
+        android:id="@+id/taskType"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:layout_marginTop="5dp"
+        android:scrollbarDefaultDelayBeforeFade="200"
+        android:scrollbarSize="4dp"
+        android:scrollbarStyle="outsideInset"
+        android:verticalScrollbarPosition="left"
+        app:layout_constraintTop_toBottomOf="@id/TypeBar"
+        tools:layout_editor_absoluteX="283dp">
+
+        <RadioButton
+            android:id="@+id/Type1"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/textView"
+            android:text="TemporalTask"/>
+
+        <RadioButton
+            android:id="@+id/Type2"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="CyclicTask"
+            android:background="@color/textView"/>
+
+        <RadioButton
+            android:id="@+id/Type3"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/textView"
+            android:text="LongTermTask"/>
+
+        <!-- <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />-->
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/TypeBar"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/text_underline"
+        android:clickable="false"
+        android:ems="10"
+        android:gravity="center|center_horizontal"
+        android:text="ChooseType"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TaskName" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/text_underline"
+        android:clickable="false"
+        android:ems="10"
+        android:gravity="center|center_horizontal"
+        android:text="Description"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/taskType" />
+
+    <EditText
+        android:id="@+id/Description"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="35dp"
+        android:background="@color/textView"
+        android:hint="请输入任务的具体描述："
+        app:layout_constraintTop_toTopOf="@id/description"
+        tools:layout_editor_absoluteX="29dp"/>
+
+    <TextView
+        android:id="@+id/type_feature"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/text_underline"
+        android:clickable="false"
+        android:ems="10"
+        android:gravity="center|center_horizontal"
+        android:text="TemporalTask"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Description" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/temp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:visibility="visible"
+        android:background="#4AADA78F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/type_feature">
+
+        <EditText
+            android:id="@+id/Deadline_temp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/textView"
+            android:hint="输入截止日期：xxxx-xx-xx"
+            android:inputType="date"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cyclic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/backgroundHui"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/type_feature">
+
+        <EditText
+            android:id="@+id/data_cyclic"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/textView"
+            android:inputType="date"
+            android:hint="输入执行日期：xxxx-xx-xx"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/times_cyclic"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="42dp"
+            android:inputType="number"
+            android:background="@color/textView"
+            android:hint="输入重复次数："
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/cycle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="42dp"
+            android:background="@color/textView"
+            android:hint="输入重复周期："
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/times_cyclic" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/LongTerm"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/backgroundHui"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/type_feature">
+
+        <EditText
+            android:id="@+id/Deadline_long"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/textView"
+            android:hint="输入截止日期：xxxx-xx-xx"
+            android:inputType="datetime"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="12dp"
+            android:background="@android:drawable/ic_input_add"
+            android:tooltipText="添加子任务"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Deadline_long" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginBottom="28dp"
+        android:gravity="center"
+        android:text="添加"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/button"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
